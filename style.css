@@ -1,0 +1,12 @@
+header{
+    background-color: lightblue;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
