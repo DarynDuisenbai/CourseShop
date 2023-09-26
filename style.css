@@ -10,3 +10,18 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+.carousel{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .carousel-inner {
+    height: 800px;
+  }
+  .carousel-inner h2{
+    border: 2px solid black;
+    outline: #ff4c68 solid 10px;
+    margin: auto;  
+    padding: 20px;
+    text-align: center;
+  }
