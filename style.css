@@ -1,5 +1,9 @@
+body{
+  background-color: #212529;
+}
+
 header{
-    background-color: lightblue;
+    background-color: #0d6efd;
     font-size: 25px;
     font-weight: bold;
     
@@ -10,18 +14,86 @@ header{
     justify-content: center;
     align-items: center;
 }
+.card{
+  background-color: #212529;
+}
 
-.carousel{
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .carousel-inner {
-    height: 800px;
-  }
-  .carousel-inner h2{
-    border: 2px solid black;
-    outline: #ff4c68 solid 10px;
-    margin: auto;  
-    padding: 20px;
-    text-align: center;
-  }
+
+/*Text*/
+.home{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.course{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.col-md-5{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.katalog{
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+.katalog-2{
+  color:white;
+  text-align: center;
+  font-weight:100;
+  font-size: 30px;
+}
+.python_text{
+  color:white;
+  text-align:center;
+  font-weight: bold;
+  font-size: 60px;
+}
+.star::before {
+  content: "\2605"; /* Юникодный символ звезды */
+  color: black; /* Цвет звезды */
+  margin-right: 4px; /* Расстояние между звездой и текстом */
+}
+/*Cards*/
+.jun{
+  position: relative;
+  top: 205px;
+}
+.middle{
+  position: relative;
+  top: 78px;
+}
+.price{
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top:5px;
+  font-size: 30px;
+}
+.lvl{
+  font-weight: bolder;
+}
+.lvlm{
+  position: relative;
+  top:130px;
+  font-weight: bolder;
+}
+.lvls{
+  position: relative;
+  top:52px;
+  font-weight: bolder;
+}
+
+
+/*For footer*/
+hr {
+  border: 3px solid white;
+  background-color: white; /* Устанавливаем цвет фона линии */
+}
