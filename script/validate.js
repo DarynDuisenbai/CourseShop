@@ -1,46 +1,40 @@
-// validate.js
-
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('myForm').addEventListener('submit', function (e) {
-    // Reset error messages
-    document.getElementById('nameError').textContent = '';
-    document.getElementById('emailError').textContent = '';
-    document.getElementById('passwordError').textContent = '';
-
-    // Get input values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    let isValid = true;
-
-    // Validate Name
-    if (name.trim() === '') {
-      isValid = false;
-      document.getElementById('nameError').textContent = 'Name is required';
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var nameError = document.getElementById("nameError");
+    var emailError = document.getElementById("emailError");
+    var passwordError = document.getElementById("passwordError");
+    var submitButton = document.querySelector("button[type=submit]");
+    
+    // Проверка имени (должно быть не пустым)
+    if (name.trim() === "") {
+        nameError.innerText = "Введите имя";
+        return false;
+    } else {
+        nameError.innerText = "";
     }
 
-    // Validate Email
-    if (!isValidEmail(email)) {
-      isValid = false;
-      document.getElementById('emailError').textContent = 'Invalid email format';
+    // Проверка email (простейшая проверка на формат email)
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+        emailError.innerText = "Введите корректный email";
+        return false;
+    } else {
+        emailError.innerText = "";
     }
 
-    // Validate Password
+    // Проверка пароля (минимум 8 символов)
     if (password.length < 8) {
-      isValid = false;
-      document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long';
+        passwordError.innerText = "Пароль должен содержать минимум 8 символов";
+        return false;
+    } else {
+        passwordError.innerText = "";
     }
 
-    // Prevent form submission if validation fails
-    if (!isValid) {
-      e.preventDefault();
-    }
-  });
+    // Если все проверки прошли, переход на myAkk.html
+    window.location.href = "myAkk.html";
 
-  function isValidEmail(email) {
-    // A basic email validation regex
-    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    return emailPattern.test(email);
-  }
-});
+    // Отменить отправку формы (чтобы она не отправилась по умолчанию)
+    return false;
+}
