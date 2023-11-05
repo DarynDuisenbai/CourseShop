@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Webleb</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="contact.css" rel="stylesheet">
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
+      <audio id="audio" src="audio/submit.mp3" autoplay="false" ></audio>
+      <a href="#" onclick="playSound();">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+      <a href="index.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Home
+      </a>
+    </form>
+    <script src="script/validate.js"></script>
+    <script>
+      function playSound() {
+            var sound = document.getElementById("audio");
+            sound.play();
+        }
+      </script>
+  </div>
+</body>
+</html>

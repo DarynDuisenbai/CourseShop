@@ -1,40 +1,32 @@
-function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var nameError = document.getElementById("nameError");
-    var emailError = document.getElementById("emailError");
-    var passwordError = document.getElementById("passwordError");
-    var submitButton = document.querySelector("button[type=submit]");
-    
-    // Проверка имени (должно быть не пустым)
-    if (name.trim() === "") {
-        nameError.innerText = "Введите имя";
-        return false;
-    } else {
-        nameError.innerText = "";
-    }
+const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+      const usernameError = document.getElementById('usernameError');
+      const passwordError = document.getElementById('passwordError');
+      const submitButton = document.getElementById('submitButton');
 
-    // Проверка email (простейшая проверка на формат email)
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!email.match(emailPattern)) {
-        emailError.innerText = "Введите корректный email";
-        return false;
-    } else {
-        emailError.innerText = "";
-    }
+      submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
 
-    // Проверка пароля (минимум 8 символов)
-    if (password.length < 8) {
-        passwordError.innerText = "Пароль должен содержать минимум 8 символов";
-        return false;
-    } else {
-        passwordError.innerText = "";
-    }
+        let isValid = true;
 
-    // Если все проверки прошли, переход на myAkk.html
-    window.location.href = "myAkk.html";
+        if (usernameInput.value.trim() === '') {
+          usernameError.textContent = 'Username is required';
+          usernameError.style.color = 'white';
+          isValid = false;
+        } else {
+          usernameError.textContent = 'OK';
+        }
 
-    // Отменить отправку формы (чтобы она не отправилась по умолчанию)
-    return false;
-}
+        if (passwordInput.value.trim() === '') {
+          passwordError.textContent = 'Password is required';
+          passwordError.style.color = 'white';
+          isValid = false;
+        } else {
+          passwordError.textContent = 'OK';
+        }
+
+        if (isValid) {
+          // Submit the form
+          alert('Form submitted successfully');
+        }
+      });

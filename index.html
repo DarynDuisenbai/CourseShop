@@ -53,6 +53,7 @@
                 <li><a class="dropdown-item" href="java.html">Java Developer</a></li>
                 <li><a class="dropdown-item" href="python.html">Python Developer</a></li>
                 <li><a class="dropdown-item" href="web.html">Web Developer</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact us</a></li>
               </ul>
             </li>
           </ul>
@@ -158,86 +159,65 @@
     </div>
 
   <!--Вкладки-->
-  <h2>Наши преподователи каждго курса</h2>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <div class="tabs">
-          <button class="tablinks active" onclick="openTab(event, 'category1')">Java</button>
-          <button class="tablinks" onclick="openTab(event, 'category2')">Python</button>
-          <button class="tablinks" onclick="openTab(event, 'category3')">Data Science and CB</button>
-        </div>
-      
-        <div id="category1" class="tabcontent">
-          <h2>Java</h2>
-          <ul>
-              <li><img src="img/java1.jpg" alt="Максимов Фёдор Николаевич"></li>
-          </ul>
-        </div>
-      
-        <div id="category2" class="tabcontent">
-          <h2>Python</h2>
-          <ul>
-              <li><img src="img/python1.png" alt="Чернов Егор Маркович"></li>
-          </ul>
-        </div>
-      
-        <div id="category3" class="tabcontent">
-          <h2>Data Science and CB</h2>
-          <ul>
-              <li><img src="img/kb1.jpg" alt="Молчанов Назар Сергеевич"></li>
-          </ul>
+      <h2 style="color: white; margin: 15px;">Our teachers of each course</h2>
+      <div class="tabs">
+        <div class="tab" onclick="openTab('tab1')">Java</div>
+        <div class="tab" onclick="openTab('tab2')">Python</div>
+        <div class="tab" onclick="openTab('tab3')">Web</div>
+      </div>
+      <div id="tab1" class="tab-content">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5">
+                This is Daryn. Signor Java is a developer with 6 years of programming experience. 
+                He has worked with companies such as Yandex, Sber, Tinkoff.
+              </div>
+              <div class="col-md-2">
+                
+              </div>
+              <div class="col-md-5">
+                <img src="img/java.png" alt="" style="width:200px;height:200px;">
+              </div>
+            </div>
         </div>
       </div>
-      <div class="col-md-4"></div>
-    </div>
-  </div>
-  <script src="script/tab.js"></script>
-
-
-
-  <!--Registration form-->
-  <div class = "container" style = "background-color: #b5e916; border-radius: 13px; ">
-      
-    <div class="row">
-    <div class = "col-md-1"></div>
-    <div class = "col-md-5">
-      <p class = "home">Registrations </p>
-    </div>
-    <div class = "col-md-6">
-        <div class = "space" style = "margin: 5px;"></div>
-        <div class="container">
-          <form id="myForm" onsubmit="return validateForm()">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-                <span id="nameError" class="text-danger"></span>
+      <div id="tab2" class="tab-content" >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5">
+              This is Abai. Signor Python is a developer with 7 years of programming experience. 
+              He worked with such companies as Halyk Bank, Sber, Tinkoff.
             </div>
-    
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-                <span id="emailError" class="text-danger"></span>
+            <div class="col-md-2">
+              
             </div>
-    
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-                <span id="passwordError" class="text-danger"></span>
+            <div class="col-md-5">
+              <img src="img/python.png" alt="" style="width:200px;height:200px;">
             </div>
-    
-            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
-        </form>
-    
+          </div>
         </div>
-          <div class = "space" style = "margin: 5px;"></div>
+      </div>
+      <div id="tab3" class="tab-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-5">
+              This is Asylzhan. Signor Frontend developer with 5 years of programming experience. 
+              He has worked with companies such as Eurasia Bank, Yandex, Tinkoff.
+            </div>
+            <div class="col-md-2">
+              
+            </div>
+            <div class="col-md-5">
+              <img src="img/web.png" alt="" style="width:200px;height:200px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="script/tab.js"></script>
 
-    </div>
-    </div>
-  </div>
-  <!--Registration form-->
 
+
+  
 
   <!--FOOTER-->
   <hr>
