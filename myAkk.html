@@ -383,9 +383,19 @@
   
   <script src="script/accordion.js"></script>
 
-
-  <button class="my-button" id="interactive-button">End Course</button>
-  <script src="script/button.js"></script>
+  <section>
+    <button class="show-modal">End course</button>
+    <span class="overlay1"></span>
+    <div class="modal-box">
+      <i class="fa-regular fa-circle-check"></i>
+      <h2>Congrulations</h2>
+      <h3>You have completed the mini-training, now it remains to enroll in the course and become a professional IT specialist</h3>
+      <div class="buttons">
+        <button class="close-btn">Ok, Close</button>
+      </div>
+    </div>
+  </section>
+  
     
   <!--FOOTER-->
   <hr>
@@ -399,7 +409,14 @@
         <footer class="blockquote-footer" style="color:white;" >Abai Sagizhan<cite title="Source Title" style="color:white;" > Internet</cite></footer>
       </blockquote>
     </div>
-  </div>>
+  </div>
+  <div onclick="scrollToTop()" class="scrollTop">to Top</div>
+   <script>function scrollToTop(){
+    window.scrollTo(0,0);
+    
+}</script>
 
+
+<script src="/search/final.js"></script>
 </body>
 </html>

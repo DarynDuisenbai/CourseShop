@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script/timer.js"></script>
     <script src="script/validate.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     <title>Course shop</title>
 </head>
@@ -38,6 +39,21 @@
   
       <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#"><i class="fas fa-fire"></i> Course shop</a>
+        <!--search bar-->
+        <div class="search-box">
+          <input type="text" placeholder="Type to search..">
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+    <div class="cancel-icon">
+            <i class="fas fa-times"></i>
+          </div>
+    <div class="search-data">
+    </div>
+    </div>
+    <script src="/script/search.js"></script>
+
+        <!--byttons-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,6 +76,9 @@
         </div>
       </nav>
     </div>
+    <!--search bar-->
+    
+
   </header>
   <!--Space between header and div class-->
   <div class = "space" style = "margin: 25px;"></div>
@@ -231,8 +250,12 @@
         <footer class="blockquote-footer" style="color:white;" >Duisenbai Daryn <cite title="Source Title" style="color:white;" >Internet</cite></footer>
       </blockquote>
     </div>
-  </div>>
-
-   
+  </div>
+  <!--Button to top-->
+<div onclick="scrollToTop()" class="scrollTop">to Top</div>
+   <script>function scrollToTop(){
+    window.scrollTo(0,0);
+    
+}</script>
 </body>
 </html>
